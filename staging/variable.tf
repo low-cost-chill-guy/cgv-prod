@@ -21,8 +21,8 @@ variable "db_port" {
   sensitive   = true
 }
 
-variable "subnet_ids" {
-  type        = list(string)
-  description = "List of subnet IDs for az-a and az-c"
-}
+#variable "subnet_ids" {
+#  type        = map(list(string))
+#  description = "List of subnet IDs for az-a and az-c"
+#}
 
