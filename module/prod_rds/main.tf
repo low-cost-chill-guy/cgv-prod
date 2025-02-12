@@ -27,9 +27,10 @@ module "aws_rds_writer_az_a" {
   instance_class    = "db.t3.micro"
   allocated_storage = 20
 
-  db_name  = var.db_name
-  username = var.db_username
-  port     = var.db_port
+  db_name        = var.db_name
+  username    = var.db_username
+  port        = var.db_port
+  password    = var.db_password
 
   availability_zone = "ap-northeast-2a"
   multi_az         = false
@@ -56,9 +57,10 @@ module "aws_rds_reader_az_a" {
   instance_class    = "db.t3.micro"
   allocated_storage = 20
 
-  db_name  = var.db_name
-  username = var.db_username
+  #db_name     = var.db_name
+  #username = var.db_username
   port     = var.db_port
+  #password = var.db_password
 
   availability_zone = "ap-northeast-2a"
   multi_az         = false
@@ -88,6 +90,7 @@ module "aws_rds_writer_az_c" {
   db_name  = var.db_name
   username = var.db_username
   port     = var.db_port
+  password = var.db_password
 
   availability_zone = "ap-northeast-2c"
   multi_az         = false
@@ -114,10 +117,10 @@ module "aws_rds_reader_az_c" {
   instance_class    = "db.t3.micro"
   allocated_storage = 20
 
-  db_name  = var.db_name
-  username = var.db_username
+  #db_name  = var.db_name
+  #username = var.db_username
   port     = var.db_port
-
+  #password = var.db_password
   availability_zone = "ap-northeast-2c"
   multi_az         = false
   replicate_source_db = module.aws_rds_writer_az_c.db_instance_id

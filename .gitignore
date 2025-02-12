@@ -1,0 +1,16 @@
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# `.terraform` directory, which contains modules and plugins
+.terraform/
+
+# Terraform variables that might contain sensitive data
+terraform.tfvars
+
+# Crash log files
+crash.log
+
+# Terraform plan files (optional, depending on your workflow)
+*.tfplan
+terraform.tfvars

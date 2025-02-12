@@ -5,6 +5,12 @@ variable "db_name" {
   sensitive   = true
 }
 
+variable "db_password" {
+  description = "The password for the database"
+  type        = string
+  sensitive   = true
+}
+
 variable "db_username" {
   description = "Username for the master DB user"
   type        = string
