@@ -24,7 +24,18 @@ variable "db_port" {
   sensitive   = true
 }
 
-variable "subnet_ids" {
-  description = "Map of subnet IDs for each AZ"
-  type        = map(string)
+variable "subnet_ids_az_a" {
+  type        = list(string)
+  description = "List of subnet IDs for AZ-a"
+}
+
+variable "subnet_ids_az_c" {
+  type        = list(string)
+  description = "List of subnet IDs for AZ-c"
+}
+
+variable "major_engine_version" {
+  description = "The major engine version of the RDS instance"
+  type        = string
+  default     = "8.0"
 }
