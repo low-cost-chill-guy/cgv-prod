@@ -17,6 +17,7 @@ module "eks_az_a" {
     node_pools = ["general-purpose"]
   }
 
+
   tags = {
     Environment = "dev"
     Terraform   = "true"
